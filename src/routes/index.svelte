@@ -2,6 +2,7 @@
 	export const prerender = true;
 </script>
 
+
 <script>
 	import Counter from '$lib/Counter.svelte';
 </script>
@@ -12,8 +13,8 @@
 
 <section>
 	<div class="home-inner">
-		<img src="bill-cropped.jpg"/>
-		<h1>Will Samuel - Developer</h1>
+		<img src="will-turin.jpg"/>
+		<h1>Will Samuel <br/> Developer</h1>
 	</div>
 </section>
 
@@ -21,8 +22,7 @@
 	section {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		background-color: rgba(255,255,255,0.5);
+		justify-content: center;		
 		padding: 20px;
 	}
 
@@ -33,7 +33,20 @@
 	}
 
 	.home-inner img {
-		width: 300px;
+		width: 200px;
+		height: 200px;
+		display: block;
+		object-fit: cover;
+		object-position: top;
+		border: 3px solid #84D2F6;
 		margin-right: 10px;
+		border-radius: 100%;
+	}
+	h1 {
+		color: #84D2F6;
+    font-size: 100px;
+    line-height: 0.7;
+    letter-spacing: -14.9px;
+	text-transform: uppercase;
 	}
 </style>
