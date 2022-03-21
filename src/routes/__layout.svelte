@@ -5,7 +5,7 @@
 
 <Header />
 
-<main style="height: calc(100VH - 50px); display: flex;align-items:center;justify-content:center;">
+<main style="height: calc(100VH - 64px); display: flex;align-items:center;justify-content:center;">
 	<slot />
 </main>
 

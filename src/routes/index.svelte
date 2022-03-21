@@ -13,7 +13,9 @@
 
 <section>
 	<div class="home-inner">
-		<img src="will-turin.jpg"/>
+		<div class="image-div">
+			<img src="will-turin.jpg"/>
+		</div>
 		<h1>Will Samuel <br/> Developer</h1>
 	</div>
 </section>
@@ -32,14 +34,23 @@
 		justify-content: center;
 	}
 
+	.image-div {
+		background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
+		border-radius: 100%;
+		width: 250px;
+		height: 250px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 20px;
+	}
+
 	.home-inner img {
-		width: 200px;
-		height: 200px;
+		width: 96%;
+		height: 96%;
 		display: block;
 		object-fit: cover;
 		object-position: top;
-		border: 3px solid #84D2F6;
-		margin-right: 10px;
 		border-radius: 100%;
 	}
 	h1 {

@@ -28,7 +28,10 @@ body::before {
 }
 
 .active {
-	color: #84D2F6;
+	background: rgb(0,93,221);
+	background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
+	-webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
 }
 
 h1,
@@ -54,6 +57,11 @@ h1 {
 	font-size: 2rem;
 	text-align: center;
 	color: #84D2F6;
+	background: rgb(0,93,221);
+background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 8px;
 }
 
 h2 {
