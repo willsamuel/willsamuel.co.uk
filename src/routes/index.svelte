@@ -1,33 +1,27 @@
 <script context="module">
 	export const prerender = true;
+	import { fly } from 'svelte/transition';
 </script>
 
 
 <script>
-	import Counter from '$lib/Counter.svelte';
+
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<section>
+<section in:fly="{{ y: 200, duration: 300}}" >
 	<div class="home-inner">
 		<div class="image-div">
-			<img src="will-turin.jpg"/>
+			<img src="will-turin.jpg" alt="Photo of Will Samuel at the Stadio Olimpico de Turin"/>
 		</div>
 		<h1>Will Samuel <br/> Developer</h1>
 	</div>
 </section>
 
-<style>
-	section {
-		display: flex;
-		align-items: center;
-		justify-content: center;		
-		padding: 20px;
-	}
-
+<style> 
 	.home-inner {
 		display: flex;
 		align-items: center;
@@ -53,11 +47,22 @@
 		object-position: top;
 		border-radius: 100%;
 	}
+
 	h1 {
 		color: #84D2F6;
-    font-size: 100px;
-    line-height: 0.7;
-    letter-spacing: -14.9px;
-	text-transform: uppercase;
+		font-size: 100px;
+		line-height: 0.7;
+		letter-spacing: -14.9px;
+		text-transform: uppercase;
+	}
+
+	@media(max-width: 1000px){		
+		.home-inner {
+			flex-direction: column;
+		}
+
+		h1 {
+			font-size: 50px;
+		}
 	}
 </style>

@@ -1,20 +1,23 @@
 <script context="module">
 	export const prerender = true;
+	import { fly } from 'svelte/transition';
+
 </script>
 
 
 <script>
-	import Counter from '$lib/Counter.svelte';
+	 import { fade } from 'svelte/transition';
 </script>
 
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
 
-<section>
-	<div class="home-inner">
+<section in:fly="{{ y: 200, duration: 300}}" >
+	<div class="inner">
 		<h1>Will Samuel's Git</h1>
-		<div class="git-items">
+		<p>I don't really have much code in public GITs, all my best work is for private companies, but here are a few things I've put together.</p>
+		<div class="git-items"> 
 			<div class="git-single">
 				<p>Python SEO Tools</p>
 			</div>
@@ -35,20 +38,6 @@
 </section>
 
 <style>
-	section {
-		display: flex;
-		align-items: center;
-		justify-content: center;		
-		padding: 20px;
-	}
-
-	.home-inner {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		background-color: white;
-	}
 
 	.git-items {
 		display: flex;

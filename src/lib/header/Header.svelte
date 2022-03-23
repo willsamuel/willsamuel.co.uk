@@ -35,15 +35,13 @@
 		</svg>
 	</nav>
 
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
-	</div>
 </header>
 
 <style>
 	header {
 		display: flex;
-		justify-content: space-between;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.corner {
@@ -68,6 +66,8 @@
 	nav {
 		display: flex;
 		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 		--background: rgba(255, 255, 255, 0.7);
 	}
 
@@ -115,7 +115,7 @@
 		display: flex;
 		height: 100%;
 		align-items: center;
-		padding: 0 1em;
+		padding: 0 10px;
 		color: var(--heading-color);
 		font-weight: 700;
 		font-size: 0.8rem;

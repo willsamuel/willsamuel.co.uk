@@ -1,29 +1,12 @@
-@import '@fontsource/fira-mono';
-
 
 body {
 	font-family: 'Shippori Antique', sans-serif;
 }
 
-body::before {
-	content: '';
-	width: 80vw;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	left: 10vw;
-	z-index: -1;
-	background: radial-gradient(
-		50% 50% at 50% 50%,
-		var(--pure-white) 0%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	opacity: 0.05;
-}
 
 #svelte {
 	min-height: 100vh;
-	display: flex;
+	display: flex; 
 	flex-direction: column;
 }
 
@@ -32,29 +15,26 @@ body::before {
 	background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
 	-webkit-background-clip: text;
 	  -webkit-text-fill-color: transparent;
-}
+} 
 
-h1,
-h2,
-p {
-	font-weight: 400;
-}
 
-p {
-	line-height: 1.5;
-}
 
-a {
-	color: var(--accent-color);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
 
 h1 {
-	font-size: 2rem;
+	font-size: 60px;
+	text-align: center;
+	color: #84D2F6;
+	background: rgb(0,93,221);
+background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 9px;
+  font-weight: 400;
+  margin: 0px;
+}
+ 
+h2 {
+	font-size: 30px;
 	text-align: center;
 	color: #84D2F6;
 	background: rgb(0,93,221);
@@ -62,32 +42,25 @@ background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
 -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-bottom: 8px;
+  font-weight: 400;
 }
 
-h2 {
-	font-size: 1rem;
-	color: #84D2F6;
+.inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: rgba(255,255,255,0.9);
+	padding: 20px;
+	max-width: 700px;
+	border-radius: 5px;
 }
 
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--text-color);
-}
-
-input,
-button {
-	font-size: inherit;
-	font-family: inherit;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;		
+	padding: 20px;
 }
 
 @media (min-width: 720px) {
