@@ -90,7 +90,7 @@
 		padding: 0 10px;
 		color: var(--heading-color);
 		font-weight: 700;
-		font-size: 0.8rem;
+		font-size: 13px;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		text-decoration: none;
@@ -98,6 +98,11 @@
 
 		&:hover {
 			color: #005ddd;
+		}
+
+		@media(max-width:720px){
+			font-size: 12px;
+			padding: 0px 6px;
 		}
 	}
 

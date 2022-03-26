@@ -56,13 +56,16 @@
 		text-transform: uppercase;
 	}
 
-	@media(max-width: 1000px){		
+	@media(max-width: 720px){		
 		.home-inner {
 			flex-direction: column;
 		}
 
 		h1 {
-			font-size: 50px;
+			margin-top: 20px;
+			font-size: 48px;
+			letter-spacing: -4px;
+			line-height: 35px;
 		}
 	}
 </style>

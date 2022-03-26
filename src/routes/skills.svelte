@@ -19,8 +19,8 @@
 		<div class="circle">
 			<div class="triangle">
 				<div class="triangle-inner">
-				<h2>Front End</h2> 
-				<p>HTML, CSS, SASS, jQuery, React, Svelte, NPM</p>
+					<h2>Front End</h2> 
+					<p>HTML, CSS, SASS, jQuery, React, Svelte, NPM</p>
 				</div>
 				<div class="background"></div>
 			</div>
@@ -78,7 +78,7 @@
 	// background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
 	color: white;
 
-	@media(max-width:1000px){
+	@media(max-width:720px){
 		width:calc(100VW - 80px);
 		height:calc(100VW - 80px);
 	}
@@ -131,6 +131,21 @@
 		animation-duration: 30s;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
+
+		h2 {
+			@media(max-width:720px){
+				margin-bottom: 0px;
+				font-size: 18px;
+			}
+		}
+
+		p {
+			@media(max-width:720px){
+				margin-bottom: 0px;
+				font-size: 12px;
+				line-height: 1;
+			}
+		}
 	}
 
 	&:nth-of-type(2) {
@@ -148,7 +163,7 @@
 			animation-name: circle-3;
 		}
 		.background {
-			border-color: #6cff47 transparent transparent transparent
+			border-color: #57A773 transparent transparent transparent
 		}
 	}
 	&:nth-of-type(4) {
