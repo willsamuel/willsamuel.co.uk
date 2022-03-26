@@ -1,23 +1,13 @@
 <script context="module">
 	export const prerender = true;
-	import Test from '$lib/Test.svelte';
 	import { fly } from 'svelte/transition';
 </script>
 
 
 <script>
-
 	var date = new Date().getFullYear();
 	let year = date - "2015";
-
-	let code = "\
-	Will <span style='color:red'>=</span> <span style='color:aqua'>Developer</span>()<br/>\
-	Will.<span style='color:aqua'>setGender</span>(<span style='color:yellow'>'Male'</span>)<br/>\
-	Will.<span style='color:aqua'>setAge</span>(<span style='color:mediumpurple'>29</span>)<br/>\
-	Will.<span style='color:aqua'>setCodingExperience</span>(<span style='color:mediumpurple'>7</span>)<br/>\
-	Will.<span style='color:aqua'>setNationality</span>(<span style='color:yellow'>'English'</span>)<br/>\
-	Will.<span style='color:aqua'>setLocation</span>(<span style='color:yellow'>'London'</span>)<br/>\
-	Will.<span style='color:aqua'>setLanguages</span>([<span style='color:yellow'>'PHP'</span>, <span style='color:yellow'>'Python'</span>, <span style='color:yellow'>'JavaScript'</span>])";
+	let age = date - "1993";
 </script>
 
 
@@ -30,8 +20,15 @@
 	<div class="inner">
 		<h1>About Will Samuel</h1>
 		<code>		
-{@html code}			
-		</code>
+			<span style='color:#f92472'>from</span> jobs <span style='color:#f92472'>import</span> developer<br/>
+			Will <span style='color:#f92472'>=</span> <span style='color:#67d8ef'>developer</span>()<br/>
+			Will.<span style='color:#67d8ef'>setGender</span>(<span style='color:#e7db74'>'Male'</span>)<br/>
+			Will.<span style='color:#67d8ef'>setAge</span>(<span style='color:#ac80ff'>{age}</span>)<br/>
+			Will.<span style='color:#67d8ef'>setNationality</span>(<span style='color:#e7db74'>'English'</span>)<br/>
+			Will.<span style='color:#67d8ef'>setLocation</span>(<span style='color:#e7db74'>'London'</span>)<br/>
+			Will.<span style='color:#67d8ef'>setYearsCoding</span>(<span style='color:#ac80ff'>{year}</span>)<br/>
+			Will.<span style='color:#67d8ef'>setLanguages</span>([<span style='color:#e7db74'>'PHP'</span>, <span style='color:#e7db74'>'Python'</span>, <span style='color:#e7db74'>'JavaScript'</span>])<span class="blinker">|</span>		
+		</code> 
 	</div>
 </section>
  
@@ -45,9 +42,24 @@
 	}
 
 	code {
-		background-color: #1e1e1e;
-		padding: 10px;
-		color: white;
+		background-color: #282923;
+    padding: 20px;
+    color: #f8f8f2;
+    margin-top: 10px;
+	font-size: 14px;
 	} 
+	
+	.blinker {
+		animation:1.3s blink infinite step-end;
+		font-size: 18px;
+		line-height: 16px;
+		margin-left: -5px;
+	} 
+
+	@keyframes blink{
+  0%   {opacity: 1}
+  50%  {opacity: 0}
+  0%   {opacity: 1}
+}
 
 </style>

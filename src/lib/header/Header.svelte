@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
 </script>
 
 <header>
@@ -37,30 +36,15 @@
 
 </header>
 
-<style>
+<style lang="scss">
 	header {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		position: fixed;
+		top: 0px;
+		left: 0px;
 		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
 	}
 
 	nav {
@@ -68,7 +52,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		--background: rgba(255, 255, 255, 0.7);
+		--background: rgba(255, 255, 255, 0.9);
 	}
 
 	svg {
@@ -99,18 +83,6 @@
 		height: 100%;
 	}
 
-	li.active::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
-	}
-
 	nav a {
 		display: flex;
 		height: 100%;
@@ -123,6 +95,10 @@
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
+
+		&:hover {
+			color: #005ddd;
+		}
 	}
 
 	a:hover {

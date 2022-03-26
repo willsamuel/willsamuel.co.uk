@@ -9,49 +9,61 @@
 </script>
 
 <svelte:head>
-	<title>Home</title> 
+	<title>Will Samuel - Skills</title> 
 </svelte:head>
 
 <section in:fly="{{ y: 200, duration: 300}}" >
 	<div class="inner">
 		<h1>Skills</h1>
-		<p>Including, but not limited to...</p>
+		<div class="circle-outer">
 		<div class="circle">
 			<div class="triangle">
 				<div class="triangle-inner">
-				<h2>PHP</h2> 
-				<p>WordPress, Laravel</p>
+				<h2>Front End</h2> 
+				<p>HTML, CSS, SASS, jQuery, React, Svelte, NPM</p>
 				</div>
+				<div class="background"></div>
 			</div>
 			<div class="triangle">
 				<div class="triangle-inner">
-					<h2>Python</h2> 
-					<p>Django, Flask</p>
-					</div>
-			</div>
-			<div class="triangle">
-				<div class="triangle-inner">
-					<h2>Javascript</h2> 
-					<p>jquery, React, Svelte</p>
+					<h2>Back End</h2> 
+					<p>PHP, WordPress, Laravel, Python, Django, Flask, SQL</p>
 				</div>
+				<div class="background"></div>
 			</div>
 			<div class="triangle">
 				<div class="triangle-inner">
 					<h2>Dev Ops</h2> 
-					<p>Linux, CI/CD, GIT</p>
+					<p>Linux Server, cPanel, Plesk, CI/CD, GIT</p>					
 				</div>
+				<div class="background"></div>
 			</div>
 			<div class="triangle">
 				<div class="triangle-inner">
-					<h2>Markup</h2> 
-					<p>HTML5, CSS3, SASS, Less, Gulp, NPM</p>
+					<h2>SEO</h2> 
+					<p>Tech SEO, Speed Optimisation, Site Audits</p>
+					
 				</div>
+				<div class="background"></div>
+			</div>
+			<div class="triangle">
+				<div class="triangle-inner">
+					<h2>Soft Skills</h2> 
+					<p>Developer Mentoring, Client Meetings, Project Management</p>					
+				</div>
+				<div class="background"></div>
 			</div>
 		</div>
+	</div>
 	</div>
 </section>
 
 <style lang="scss">
+
+	.circle-outer {
+		background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
+		border-radius: 100%;
+	}
 .circle {
 	width: 65VH;
 	height: 65VH;
@@ -60,9 +72,24 @@
 	position: relative;
 	overflow: hidden;
 	animation-name: rotate;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	// background: linear-gradient(90deg, rgba(0,93,221,1) 0%, rgba(0,191,230,1) 100%);
+	color: white;
+
+	@media(max-width:1000px){
+		width:calc(100VW - 80px);
+		height:calc(100VW - 80px);
+	}
+
+	h2 {
+		color: white;
+		background: transparent;
+		-webkit-background-clip: initial;
+		-webkit-text-fill-color: white;
+		margin-bottom: 10px;
+	}
 }
 
 .triangle {
@@ -77,7 +104,21 @@
 	align-items: flex-start;
 	justify-content: center;
 
+	.background {
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 500px 359px 0 359px;
+		border-color: #5650F5 transparent transparent transparent;	
+		z-index:-1;
+	}
+
 	.triangle-inner {
+		margin-top: 2%;
 		width: 70%;
 		height: 70%;
 		border-radius: 100%;
@@ -87,9 +128,9 @@
 		align-items: center;
 		flex-direction: column;
 		animation-name: circle-1;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+		animation-duration: 30s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
 	}
 
 	&:nth-of-type(2) {
@@ -97,11 +138,17 @@
 		.triangle-inner {
 			animation-name: circle-2;
 		}
+		.background {
+			border-color: #3EDEB4 transparent transparent transparent
+		}
 	}
 	&:nth-of-type(3) {
 		transform: rotate(144deg);
 		.triangle-inner {
 			animation-name: circle-3;
+		}
+		.background {
+			border-color: #6cff47 transparent transparent transparent
 		}
 	}
 	&:nth-of-type(4) {
@@ -109,11 +156,17 @@
 		.triangle-inner {
 			animation-name: circle-4;
 		}
+		.background {
+			border-color: #FAB348 transparent transparent transparent
+		}
 	}
 	&:nth-of-type(5) {
 		transform: rotate(288deg); 
 		.triangle-inner {
 			animation-name: circle-5;
+		}
+		.background {
+			border-color: #DE3E75 transparent transparent transparent
 		}
 	}
 }
@@ -124,7 +177,7 @@
     bottom: 0px;
     left: calc(50% - 1px);
     width: 2px;
-    height: 200%;
+    height: 100%;
     background-color: rgba(0,93,221,1);
     display: block;
     transform: rotate(-36deg);
@@ -137,7 +190,7 @@
     bottom: 0px;
     left: calc(50% - 1px);
     width: 2px;
-    height: 200%;
+    height: 100%;
     background-color: rgba(0,93,221,1);
     display: block;
     transform: rotate(36deg);
@@ -176,9 +229,11 @@
 
 p {
 	text-align: center;
+	margin: 0px;
 }
 
 h2 {
 	margin: 0px;
+	padding: 0px;
 }
 </style>

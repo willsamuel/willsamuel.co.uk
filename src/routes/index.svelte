@@ -9,13 +9,13 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Will Samuel - Home</title>
 </svelte:head>
 
 <section in:fly="{{ y: 200, duration: 300}}" >
 	<div class="home-inner">
 		<div class="image-div">
-			<img src="will-turin.jpg" alt="Photo of Will Samuel at the Stadio Olimpico de Turin"/>
+			<img src="will-turin.webp" alt="Photo of Will Samuel at the Stadio Olimpico de Turin"/>
 		</div>
 		<h1>Will Samuel <br/> Developer</h1>
 	</div>
